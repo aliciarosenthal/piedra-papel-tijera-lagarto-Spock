@@ -15,5 +15,55 @@ public class PartidaTests {
 				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
 
 	}
+	@Test
+	public void queTijeraCortaPapel() {
+
+		Mano jugadorUno = new Mano(Forma.TIJERA);
+		Mano jugadorDos = new Mano(Forma.PAPEL);
+
+		assertEquals("Tijera Corta Papel",
+				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+
+	}
+	@Test
+	public void quePapelCubrePiedra() {
+
+		Mano jugadorUno = new Mano(Forma.PAPEL);
+		Mano jugadorDos = new Mano(Forma.PIEDRA);
+
+		assertEquals("Papel Cubre Piedra",
+				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+
+	}
+	@Test
+	public void quePiedraAplastaLagarto() {
+
+		Mano jugadorUno = new Mano(Forma.PIEDRA);
+		Mano jugadorDos = new Mano(Forma.LAGARTO);
+
+		assertEquals("Piedra Aplasta Lagarto",
+				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+
+	}
+	@Test
+	public void queLagartoEnvenenaSpock() {
+
+		Mano jugadorUno = new Mano(Forma.LAGARTO);
+		Mano jugadorDos = new Mano(Forma.SPOCK);
+
+		assertEquals("Lagarto Envenena Spock",
+				Resultado.GANA, jugadorUno.jugarCon(jugadorDos));
+
+	}
+	@Test
+	public void queTijeraEmpataTijera() {
+
+		Mano jugadorUno = new Mano(Forma.TIJERA);
+		Mano jugadorDos = new Mano(Forma.TIJERA);
+
+		assertEquals("Tijera Empata Tijera",
+				Resultado.EMPATA, jugadorUno.jugarCon(jugadorDos));
+
+	}
 
 }
