@@ -25,18 +25,16 @@ public class Mano {
 	 * @return un Resultado, de acuerdo al estado del juego.
 	 */
 	public Resultado jugarCon(final Mano otra) {
-		Resultado tablaResultado[][] = {
-				{ Resultado.EMPATA, Resultado.PIERDE, Resultado.PIERDE,
-						Resultado.GANA, Resultado.GANA },
-				{ Resultado.GANA, Resultado.EMPATA, Resultado.PIERDE,
-						Resultado.PIERDE, Resultado.GANA },
-				{ Resultado.GANA, Resultado.GANA, Resultado.EMPATA,
-						Resultado.PIERDE, Resultado.PIERDE },
-				{ Resultado.PIERDE, Resultado.GANA, Resultado.GANA,
-						Resultado.EMPATA, Resultado.PIERDE },
-				{ Resultado.PIERDE, Resultado.PIERDE, Resultado.GANA,
-						Resultado.GANA, Resultado.EMPATA } };
-		return tablaResultado[this.forma.getValor()][otra.forma.getValor()];
+		if (this.forma.getValor() - otra.forma.getValor() == -3
+				|| this.forma.getValor() - otra.forma.getValor() == -4
+				|| this.forma.getValor() - otra.forma.getValor() == 2
+				|| this.forma.getValor() - otra.forma.getValor() == 1) {
+			return Resultado.GANA;
+		} else if (this.forma.getValor() - otra.forma.getValor() == 0) {
+			return Resultado.EMPATA;
+		} else {
+			return Resultado.PIERDE;
+		}
 	}
 
 }
