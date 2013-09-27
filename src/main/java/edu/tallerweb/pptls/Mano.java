@@ -21,12 +21,12 @@ public class Mano {
 	 * @return un Resultado, de acuerdo al estado del juego.
 	 */
 	public Resultado jugarCon(final Mano otra) {
-		int ganador1 = -2;
-		int ganador2 = 2;
-		int ganador3 = 1;
-		if (this.forma.getValor() - otra.forma.getValor() < ganador1
-				|| this.forma.getValor() - otra.forma.getValor() == ganador2
-				|| this.forma.getValor() - otra.forma.getValor() == ganador3) {
+		final int GANAA = -2;
+		final int GANAB = 2;
+		final int GANAC = 1;
+		if (this.forma.getValor() - otra.forma.getValor() < GANAA
+				|| this.forma.getValor() - otra.forma.getValor() == GANAB
+				|| this.forma.getValor() - otra.forma.getValor() == GANAC) {
 			return Resultado.GANA;
 		} else if (this.forma.getValor() - otra.forma.getValor() == 0) {
 			return Resultado.EMPATA;
