@@ -22,15 +22,15 @@ public class Mano {
 	*/
 	public Resultado jugarCon(final Mano otra) {
 		Resultado tablaResultado[][] = {
-				 { Resultado.EMPATA, Resultado.PIERDE, Resultado.PIERDE,
-						Resultado.GANA, Resultado.GANA },
-				 { Resultado.GANA, Resultado.EMPATA, Resultado.PIERDE,
-						Resultado.PIERDE, Resultado.GANA },
-				 { Resultado.GANA, Resultado.GANA, Resultado.EMPATA,
-						Resultado.PIERDE, Resultado.PIERDE },
-				 { Resultado.PIERDE, Resultado.GANA, Resultado.GANA,
-						Resultado.EMPATA, Resultado.PIERDE },
-				 { Resultado.PIERDE, Resultado.PIERDE, Resultado.GANA,
+				{ Resultado.EMPATA, Resultado.PIERDE, Resultado.PIERDE,
+						Resultado.GANA, Resultado.GANA }, 
+				{ Resultado.GANA, Resultado.EMPATA, Resultado.PIERDE,
+						Resultado.PIERDE, Resultado.GANA }, 
+				{ Resultado.GANA, Resultado.GANA, Resultado.EMPATA,
+						Resultado.PIERDE, Resultado.PIERDE }, 
+				{ Resultado.PIERDE, Resultado.GANA, Resultado.GANA,
+						Resultado.EMPATA, Resultado.PIERDE }, 
+				{ Resultado.PIERDE, Resultado.PIERDE, Resultado.GANA,
 						Resultado.GANA, Resultado.EMPATA } };
 		return tablaResultado[this.forma.getValor()][otra.forma.getValor()];
 
