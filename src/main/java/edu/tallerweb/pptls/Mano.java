@@ -1,25 +1,25 @@
 package edu.tallerweb.pptls;
 
 /**
- * Representa una de las Manos involucradas en el juego
- */
+* Representa una de las Manos involucradas en el juego
+*/
 public class Mano {
 	private Forma forma;
 
 	/**
-	 * Toda Mano debe crearse con una forma dada, que ser√° la que determine su
-	 * condici√≥n en el juego.
-	 * @param forma, la Forma que adopta la Mano.
-	 */
+	* Toda Mano debe crearse con una forma dada, que ser· la que determine su
+	* condiciÛn en el juego.
+	* @param forma, la Forma que adopta la Mano.
+	*/
 	public Mano(final Forma forma) {
 		this.forma = forma;
 	}
 
 	/**
-	 * Evaluar√° el resultado de la partida seg√∫n las reglas del juego.
-	 * @param otra, la otra Mano.
-	 * @return un Resultado, de acuerdo al estado del juego.
-	 */
+	* Evaluar· el resultado de la partida seg˙n las reglas del juego.
+	* @param otra, la otra Mano.
+	* @return un Resultado, de acuerdo al estado del juego.
+	*/
 	public Resultado jugarCon(final Mano otra) {
 		final int ganaA = -2;
 		final int ganaB = 2;
