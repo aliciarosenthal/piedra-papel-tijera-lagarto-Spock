@@ -7,28 +7,26 @@ public class Mano {
 	private Forma forma;
 
 	/**
-	 * Toda Mano debe crearse con una forma dada, que ser√° la que determine su
-	 * condici√≥n en el juego.
-	 * 
-	 * @param forma
-	 *            , la Forma que adopta la Mano.
-	 */
+	* Toda Mano debe crearse con una forma dada, que ser· la que determine su
+	* condiciÛn en el juego.
+	* @param forma, la Forma que adopta la Mano.
+	*/
 	public Mano(final Forma forma) {
 		this.forma = forma;
 	}
 
 	/**
-	 * Evaluar√° el resultado de la partida seg√∫n las reglas del juego.
-	 * 
-	 * @param otra
-	 *            , la otra Mano.
-	 * @return un Resultado, de acuerdo al estado del juego.
-	 */
+	* Evaluar· el resultado de la partida seg˙n las reglas del juego.
+	* @param otra, la otra Mano.
+	* @return un Resultado, de acuerdo al estado del juego.
+	*/
 	public Resultado jugarCon(final Mano otra) {
-		if (this.forma.getValor() - otra.forma.getValor() == -3
-				|| this.forma.getValor() - otra.forma.getValor() == -4
-				|| this.forma.getValor() - otra.forma.getValor() == 2
-				|| this.forma.getValor() - otra.forma.getValor() == 1) {
+		final int ganaA = -2;
+		final int ganaB = 2;
+		final int ganaC = 1;
+		if (this.forma.getValor() - otra.forma.getValor() < ganaA
+				|| this.forma.getValor() - otra.forma.getValor() == ganaB
+				|| this.forma.getValor() - otra.forma.getValor() == ganaC) {
 			return Resultado.GANA;
 		} else if (this.forma.getValor() - otra.forma.getValor() == 0) {
 			return Resultado.EMPATA;
