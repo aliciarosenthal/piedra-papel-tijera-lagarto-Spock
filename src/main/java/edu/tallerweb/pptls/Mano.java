@@ -21,7 +21,7 @@ public class Mano {
 	* @return un Resultado, de acuerdo al estado del juego.
 	*/
 	public Resultado jugarCon(final Mano otra) {
-		Resultado tablaResultado[][] = {
+		Resultado[][] tablaResultado = {
 				{ Resultado.EMPATA, Resultado.PIERDE, Resultado.PIERDE,
 						Resultado.GANA, Resultado.GANA }, 
 				{ Resultado.GANA, Resultado.EMPATA, Resultado.PIERDE,
